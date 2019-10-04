@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>DOM Manipulation</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+  <script>
+
+    // Using createElement and appendChild in DOM
+    function makeSomething() {
+      let newElement = document.createElement("P");
+      newElement.id = "deleteElement";
+      newElement.innerText = "You made a new element!";
+      document.getElementById("addElements").appendChild(newElement);
+    }
+
+    // Using removeChild in the DOM
+    function deleteSomething() {
+      let element = document.getElementById("deleteElement");
+      if (element) { element.parentNode.removeChild(element); }
+    }
+
+    function addToList() {
+      var item = document.createElement("LI");
+      var textnode = document.createTextNode("one");
+      item.appendChild(textnode);
+
+      let list = document.getElementById("list");
+      list.insertBefore(item, list.childNodes[0])
+    }
+
+    function changeFont() {
+      var x = document.getElementsByTagName("P");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.fontFamily = "comic sans MS";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick=makeSomething()>Make an Element</button>
+  <button type="button" onclick=deleteSomething()>Delete an Element</button>
+  <h3>Adding and Deleting Elements</h3>
+  <div id="addElements"></div>
+  <div>Something else</div>
+  <button type="button" onclick=addToList()>And 1</button>
+  <ul id="list">
+    <li>two</li>
+    <li>three</li>
+  </ul>
+
+  <button type="button" onclick=changeFont()>Change Font</button>
+  <p>Capstan bowsprit nipper tender salmagundi gibbet spike clap of thunder topgallant mizzen. Chandler interloper deadlights yardarm port snow mutiny lad belay Brethren of the Coast. Black spot furl draft wherry no prey, no pay Brethren of the Coast piracy tack hornswaggle brigantine. Buccaneer Corsair Barbary Coast sheet me black spot man-of-war loot nipperkin brigantine.</p>
+</body>
+</html>
