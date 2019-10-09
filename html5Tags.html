@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>HTML5 Tags</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+  <script>
+      // Dislpays text
+    var canvas1 = document.getElementById("canvas1");
+    var txt = canvas1.getContext("2d");
+    txt.font = "30px Arial";
+    txt.fillText("Hello World",10,50);
+
+    // Draw a line
+    var canvas2 = document.getElementById("canvas2");
+    var line = canvas2.getContext("2d");
+    line.moveTo(0, 0);
+    line.lineTo(200, 100);
+    line.stroke();
+
+    // Draw a circle
+    var canvas2 = document.getElementById("canvas2");
+    var circ = canvas2.getContext("2d");
+    circ.beginPath();
+    circ.arc(95, 50, 40, 0, 2 * Math.PI);
+    circ.stroke();
+  </script>
+</head>
+
+<body>
+    <div>
+        <h3>Video Tag</h3>
+        <video width="320" height="240" controls>
+            <source src="https://www.youtube.com/watch?v=le0BLAEO93g" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>YouTube videos are different</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/le0BLAEO93g" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    </div>
+    <div>
+        <h3>Audio Tag</h3>
+        <audio controls>
+            <source src="/lion king.mp3" type="audio/mp3" />
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div>
+        <h3>Canvas</h3>
+        <p>The canvas element is an html element that is used to draw graphics using javascript.</p>
+        <p>Canvas always needs an id, width, and height</p>
+        <canvas id="canvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+        <canvas id="canvas2" width="200" height="100" style="border:1px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+</body>
+</html>
