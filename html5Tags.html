@@ -10,27 +10,6 @@
 
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 
-  <script>
-      // Dislpays text
-    var canvas1 = document.getElementById("canvas1");
-    var txt = canvas1.getContext("2d");
-    txt.font = "30px Arial";
-    txt.fillText("Hello World",10,50);
-
-    // Draw a line
-    var canvas2 = document.getElementById("canvas2");
-    var line = canvas2.getContext("2d");
-    line.moveTo(0, 0);
-    line.lineTo(200, 100);
-    line.stroke();
-
-    // Draw a circle
-    var canvas2 = document.getElementById("canvas2");
-    var circ = canvas2.getContext("2d");
-    circ.beginPath();
-    circ.arc(95, 50, 40, 0, 2 * Math.PI);
-    circ.stroke();
-  </script>
 </head>
 
 <body>
@@ -64,5 +43,28 @@
                 Your browser does not support the HTML5 canvas tag.
         </canvas>
     </div>
+
+    <!-- JavaScript Tag must be after the canvas element -->
+    <script>
+        // Dislpays text
+      var canvas1 = document.getElementById("canvas1");
+      var txt = canvas1.getContext("2d");
+      txt.font = "30px Arial";
+      txt.fillText("Hello World",10,50);
+
+      // Draw a line
+      var canvas2 = document.getElementById("canvas2");
+      var line = canvas2.getContext("2d");
+      line.moveTo(0, 0);
+      line.lineTo(200, 100);
+      line.stroke();
+
+      // // Draw a circle
+      var canvas2 = document.getElementById("canvas2");
+      var circ = canvas2.getContext("2d");
+      circ.beginPath();
+      circ.arc(95, 50, 40, 0, 2 * Math.PI);
+      circ.stroke();
+    </script>
 </body>
 </html>
