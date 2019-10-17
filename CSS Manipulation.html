@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>CSS Manipulation</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+  <script>
+
+    function makeInvisible() {
+      if (document.getElementById("visible").style.visibility === "hidden") {
+        document.getElementById("visible").style.visibility = "visible";
+        document.getElementById("invisibleButton").textContent = "Make Invisible";
+      }
+      else {
+        document.getElementById("visible").style.visibility = "hidden";
+        document.getElementById("invisibleButton").textContent = "Make Visible";
+      }
+    }
+
+    function makeInvisible2() {
+      if (document.getElementById("visible").style.display === "none") {
+        document.getElementById("visible").style.display = "block";
+        document.getElementById("invisibleButton2").textContent = "Make Invisible";
+      }
+      else {
+        document.getElementById("visible").style.display = "none";
+        document.getElementById("invisibleButton2").textContent = "Make Visible";
+      }
+    }
+
+    function changeColor() {
+      document.getElementById("colors").style.color= "purple";
+    }
+
+    function changeFont() {
+      var x = document.getElementsByTagName("P");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.fontFamily = "comic sans MS";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <h3>Ere's som Stahff</h3>
+  <div id="addElements"></div>
+  <div>Something else</div>
+  <button type="button" onclick=changeColor()>Change Color</button>
+  <p id="colors">There will be some cool text here</p>
+  Using visibility: <button type="button" onclick=makeInvisible() id="invisibleButton">Make Invisible</button>
+  Using Display: <button type="button" onclick=makeInvisible2() id="invisibleButton2">Make Invisible</button>
+  <p id="visible" style="display:block;">There will be some cooler text here</p>
+  <p>There will be some coolest text here</p>
+
+  <button type="button" onclick=changeFont()>Change Font</button>
+  <p>Capstan bowsprit nipper tender salmagundi gibbet spike clap of thunder topgallant mizzen. Chandler interloper deadlights yardarm port snow mutiny lad belay Brethren of the Coast. Black spot furl draft wherry no prey, no pay Brethren of the Coast piracy tack hornswaggle brigantine. Buccaneer Corsair Barbary Coast sheet me black spot man-of-war loot nipperkin brigantine.</p>
+</body>
+</html>
