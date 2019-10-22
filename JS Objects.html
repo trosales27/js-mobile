@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>JS Basics</title>
+  <meta name="description" content="The HTML5 Herald">
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+  <script>
+  var person = {
+      firstName : "John",
+      lastName  : "Doe",
+      age     : 50,
+      food  : "bacon"
+      };
+
+      function hello() {
+          let greeting = `Hello ${person.firstName} ${person.lastName}, it's nice to meet you. I see you like ${person.food}. I think ${person.food} is delicious!`;
+          document.getElementById("hello").innerHTML = greeting;
+      }
+
+
+  </script>
+</head>
+
+<body>
+  <h3>Objects</h3>
+  <button type="button" onclick=hello()>Hello</button>
+  <div id="hello"></div>
+
+
+</body>
+</html>
