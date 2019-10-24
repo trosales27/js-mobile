@@ -2,51 +2,72 @@
 <html>
 <head>
 <style>
-div.a {
-  width: 150px;
-  height: 80px;
-  background-color: yellow;
-  -ms-transform: rotate(20deg); /* IE 9 */
-  -webkit-transform: rotate(20deg); /* Safari 3-8 */
-  transform: rotate(20deg);
+
+  div.normal {
+    width: 150px;
+    height: 80px;
+    background-color: rgb(177, 177, 177);
+  }
+  div.a {
+    width: 150px;
+    height: 80px;
+    background-color: rgb(206, 5, 206);
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari 3-8 */
+    transform: rotate(20deg);
+  }
+
+  div.b {
+    width: 150px;
+    height: 80px;
+    background-color: rgb(4, 202, 14);
+    -ms-transform: skewY(20deg); /* IE 9 */
+    -webkit-transform: skewY(20deg); /* Safari 3-8 */
+    transform: skewY(20deg);
+  }
+
+  div.c {
+    width: 150px;
+    height: 80px;
+    background-color: rgb(221, 236, 11);
+    -ms-transform: scaleY(1.5); /* IE 9 */
+    -webkit-transform: scaleY(1.5); /* Safari 3-8 */
+    transform: scaleY(1.5);
 }
 
-div.b {
-  width: 150px;
-  height: 80px;
-  background-color: yellow;
-  -ms-transform: skewY(20deg); /* IE 9 */
-  -webkit-transform: skewY(20deg); /* Safari 3-8 */
-  transform: skewY(20deg);
-}
-
-div.c {
-  width: 150px;
-  height: 80px;
-  background-color: yellow;
-  -ms-transform: scaleY(1.5); /* IE 9 */
-  -webkit-transform: scaleY(1.5); /* Safari 3-8 */
-  transform: scaleY(1.5);
+div.d {
+    width: 150px;
+    height: 80px;
+    background-color: rgb(94, 236, 11);
+    -ms-transform: scaleY(1.5); /* IE 9 */
+    -webkit-transform: scaleY(1.5); /* Safari 3-8 */
+    transform: rotate(1.2rad) scale(4);
+    transform-origin: 25px 25px;
+    transition: 0.5s transform;
 }
 </style>
 </head>
 <body>
 
-<h1>The transform Property</h1>
+  <h1>The transform Property</h1>
 
-<h2>transform: rotate(20deg):</h2>
-<div class="a">Hello World!</div>
-<br>
+  <h2>Normal</h2>
+  <div class="normal">No Transform</div>
 
-<h2>transform: skewY(20deg):</h2>
-<div class="b">Hello World!</div>
-<br>
+  <h2>transform: rotate(20deg):</h2>
+  <div class="a">Rotating 20deg</div>
+  <br>
 
-<h2> Also cover transform-origin</h2>
-<h2>Even transform-style?</h2>
+  <h2>transform: skewY(20deg):</h2>
+  <div class="b">SkewY 20deg</div>
+  <br>
 
-<h2>transform: scaleY(1.5):</h2>
-<div class="c">Hello World!</div>
+  <h2>transform: scaleY(1.5):</h2>
+  <div class="c">ScaleY</div>
+
+  <h2>Put it all together</h2>
+  <div class="d">Yay!</div>
+
 
 </body>
 </html>
