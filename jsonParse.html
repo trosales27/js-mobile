@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>JSON Parse, Stringify</title>
+  <meta name="description" content="The">
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+  <script>
+      function jsonParse() {
+          let person = JSON.parse('{ "firstName": "Jimmy", "lastName": "Smith", "age": 30, "food": "bacon"}');
+          document.getElementById("fname").innerHTML = person.firstName;
+          document.getElementById("lname").innerHTML = person.lastName;
+          document.getElementById("age").innerHTML = person.age;
+          document.getElementById("food").innerHTML = person.food;
+      }
+
+      function object() {
+          let obj = { fname: "Jimmy", lname: "Smith", age: 30, food: "bacon" };
+          document.getElementById("object").innerHTML = `object variable:${obj}<br> object.fname: ${obj.fname}<br> obj.food: ${obj.food}`;
+      }
+
+      function stringify() {
+          let obj = { fname: "Jimmy", lname: "Smith", age: 30, food: "bacon" };
+          let string = JSON.stringify(obj);
+          document.getElementById("string").innerHTML = string;
+      }
+
+      function array() {
+          let array = ["bacon", "steak", "sausage"];
+          document.getElementById("array").innerHTML = array;
+      }
+
+      function stringify2() {
+          let array = ["bacon", "steak", "sausage"];
+          let string2 = JSON.stringify(array);
+          document.getElementById("string2").innerHTML = string2;
+      }
+  </script>
+</head>
+
+<body>
+  <h3>JSON Parse</h3>
+  <h4>Create and parse JSON</h4>
+  <h4>Display specefic json object attributes</h4>
+  <p> Hi my name is <span id=fname>_____</span> <span id="lname"></span> and I'm <span id="age">___</span> years old and I like
+    <span id="food">_______</span></p>
+    <button type="button" onclick=jsonParse()>Click me!</button>
+
+    <h3>JSON Stringify</h3>
+    <h4>Turns JS object into a JSON String</h4>
+    <div id="object"></div>
+    <div id="string"></div>
+    <button type="button" onclick=object()>View JS Object</button>
+    <button type="button" onclick=stringify()>Stringify</button>
+
+    <h3>Can also stringify JS arrays</h3>
+    <div id="array"></div>
+    <div id="string2"></div>
+    <button type="button" onclick=array()>View JS Object</button>
+    <button type="button" onclick=stringify2()>Stringify</button>
+
+</body>
+</html>
