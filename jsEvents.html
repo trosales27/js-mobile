@@ -4,22 +4,173 @@
     <meta charset="utf-8">
     <title>JS Events</title>
 <style>
+.redSquare {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: redSquare;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes redSquare {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
+
+.purpleSquare {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  animation-name: purpleSquare;
+}
+
+.purpleSquare:hover {
+  background-color: coral;
+  width: 200px;
+  height: 200px;
+  padding: 100px;
+  border-radius: 50px;
+}
+
+.yellowSquare {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  animation-name: yellowSquare;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 3px solid brown;
+}
 </style>
+<script>
+    function change() {
+        let food = document.getElementById("foodInput").value;
+        document.getElementById("food").innerHTML = food;
+    }
+
+    function keyDown() {
+        let value = document.getElementById("keyDown").value;
+        document.getElementById("typing1").innerHTML = value;
+    }
+    function keyUp() {
+        let value = document.getElementById("keyUp").value;
+        document.getElementById("typing2").innerHTML = value;
+    }
+
+    function hasNumber(myString) {
+        return /\d/.test(myString);
+    }
+
+    function verifyPassword() {
+        let password = document.getElementById("password").value;
+        let text = (hasNumber(password) ? "Good Password!" : "Your password must contain at least 1 number.");
+        document.getElementById("verify").innerHTML = text;
+    }
+
+    function pauseAnimation() {
+        let square = document.getElementById("redSquare");
+        square.style.webkitAnimationPlayState = (square.style.webkitAnimationPlayState === "running") ? "paused" : "running";
+    }
+
+    function mouseOver() {
+        document.getElementById("purpleSquare").style.transition = "all 2s";
+        // document.getElementById("purpleSquare").innerHTML = y+=1;
+    }
+
+    var x = 0;
+    function mouseOut() {
+        document.getElementById("count").innerHTML = x += 1;
+    }
+
+    function onLoad() {
+        alert("The page has been loaded!");
+    }
+
+    function touchStart() {
+        document.getElementById("start").innerHTML = "Touch Started";
+    }
+
+    function touchCancel() {
+        document.getElementById("cancel").innerHTML = "Touch Cancelled";
+    }
+
+    var touched = 0;
+    function touchMove() {
+        touched += 1;
+        document.getElementById("move").innerHTML = `Touch Moved ${touched} times`;
+    }
+</script>
 </head>
-<body>
+<body onload="onLoad()">
     <h2>JavaScript Events</h2>
     <h4>We'll use JS Events to trigger CSS transitions and animations</h4>
-    <div>onchange</div>
-    <div>onclick</div>
-    <div>onmouseover</div>
-    <div>onmouseout</div>
-    <div>onkeydown</div>
-    <div>onload</div>
-    <h4>For Mobile Devices</h4>
-    <div>ontouchcancel</div>
-    <div>ontouchend</div>
-    <div>ontouchmove</div>
-    <div>ontouchstart</div>
+    <div>
+        <h3>onChange</h3>
+        <select id="foodInput" onchange="change()">
+            <option value="none">Favorite Food:</option>
+            <option value="bacon">Bacon</option>
+            <option value="eggs">Eggs</option>
+            <option value="papayas">Papayas</option>
+        </select>
+        <p>Your favorite food is: <span id="food">nothing</span>!</p>
+    </div>
+
+    <div>
+        <h3>onClick</h3>
+        <div class="redSquare" id="redSquare"></div>
+        <button type="button" onclick="pauseAnimation()">Pause Animation!</button>
+    </div>
+    <div>
+        <h3>onMouseOver</h3>
+        <div class="purpleSquare" id="purpleSquare" onmouseover="mouseOver()"></div>
+    </div>
+    <div>
+        <h3>onMouseOut</h3>
+        <div class="yellowSquare" id="yellowSquare" onmouseout="mouseOut()">Mouse has left <span id="count"></span> times.</div>
+    </div>
+    <div>
+        <h3>Keyboard events</h3>
+        <h4>onKeyDown</h4>
+        <p>*Note that onKeyDown is very similar to onKeyPress, both do the same thig, but onKeyPress is not activated by non-character keys</p>
+        <label>Type Something: </label>
+        <input type="text" id="keyDown" onkeydown="keyDown()"><br>
+        <div id="typing1"></div>
+        <h4>onKeyUp</h4>
+        <label>Type Something: </label>
+        <input type="text" id="keyUp" onkeyup="keyUp()"><br>
+        <div id="typing2"></div>
+        <p>Can also use onChange for keyboard inputs</p>
+        <label>Enter a password</label>
+        <input type="text" id="password" onchange="verifyPassword()">
+        <div id="verify"></div>
+    </div>
+    <h2>For Mobile Devices</h2>
+    <div>
+        <h3>onTouchCancel</h3>
+        <div ontouchcancel="touchCancel()" class="box">Cancel a touch in here to see touchCancel in action.</div>
+        <div id="cancel" class="box"></div>
+    </div>
+    <div>
+            <h3>onTouchStart</h3>
+            <div ontouchend="touchStart()" class="box">Tap to see touchStart in action.</div>
+            <div id="start" class="box"></div>
+        </div>
+    <div>
+        <h3>onTouchEnd</h3>
+        <div ontouchend="touchEnd()" class="box">Tap and release to see touchEnd in action.</div>
+        <div id="end" class="box"></div>
+    </div>
+    <div>
+        <h3>onTouchMove</h3>
+        <div ontouchend="touchMove()" class="box">Tap and release to see touchMove in action.</div>
+        <div id="move" class="box"></div>
+    </div>
 
 </body>
 </html>
