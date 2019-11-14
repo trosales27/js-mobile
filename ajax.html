@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AJAX</title>
+
+<script>
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "text.json", true);
+    xhttp.send();
+}
+</script>
+</head>
+
+<body>
+    <h2>USeing AJAX to load JSON file</h2>
+    <h4>Click button to use load a simple JSON file uusing an AJAX request</h4>
+        <button type="button" onclick="loadDoc()">Click</button>
+        <div id="demo">Shrouds dead men tell no tales quarterdeck provost jury mast league ballast splice</div>
+
+        <a href="index.html"><li>Back to Index</li></a>
+</body>
+</html>
