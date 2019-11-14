@@ -1,0 +1,23 @@
+CIT 261 Journal:
+
+Week 01: Syllabus, class overview
+
+Week 02: Met with team and made lesson plan for the semester. Teamwork went well, able to communicate effectively with new team, started zoom meeting and group chat to increase our communication skills each week
+
+Week 03: Didn\'92t meet with team, rescheduled for next week, made first lesson plans on DOM manipulation
+
+Week 04: Met with team, taught each other procedural JavaScript, objects, arrays, HTML tags, DOM manipulation, JSON parse and stringify.
+
+Week 05: Met with team, went over lesson plans on JavaScript events, changing css with JavaScript and css animations. Began ideas contemplating ideas for project.
+
+Week 06: Made transition lesson plan, postponed team meeting, further brainstorming idea for project.
+
+Week 07: Worked on CSS transitions presentation, started work on AJAX lesson. Postponed group meeting after short discussion on presentations.
+
+Week 08: Not much work this week, we were all busy and couldn\'92t meet up. Were able to somewhat communicate still through text about our progress.
+
+Week 09: Worked on a few different lesson plans, AJAX, JSON Parse, JS Events, localStorage, met with team and discussed our progress through the course and the plan for our projects for the rest of the semester. Discussed different ideas as to how we could implement certain ideas into our projects.
+
+Week 10:
+Week 11:
+Week 12:
