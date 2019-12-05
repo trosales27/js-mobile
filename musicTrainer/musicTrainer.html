@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Music Trainer</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+      function playAudio(noteName) {
+          let note = `notes/note_${noteName}_audio.mp3`;
+        var audio = new Audio(note);
+        audio.play()
+      }
+  </script>
+</head>
+
+<body>
+    <h1> The Music Trainer</h1>
+    <div class="keyboard">
+        <div class="whiteKey" onmouseover="playAudio('C')"></div>
+        <div class="blackKey cSharp" onmouseover="playAudio('CSharp')"></div>
+        <div class="whiteKey" onmouseover="playAudio('D')"></div>
+        <div class="blackKey dSharp" onmouseover="playAudio('DSharp')"></div>
+        <div class="whiteKey" onmouseover="playAudio('E')"></div>
+        <div class="whiteKey" onmouseover="playAudio('F')"></div>
+        <div class="blackKey fSharp" onmouseover="playAudio('FSharp')"></div>
+        <div class="whiteKey" onmouseover="playAudio('G')"></div>
+        <div class="blackKey gSharp" onmouseover="playAudio('GSharp')"></div>
+        <div class="whiteKey" onmouseover="playAudio('A')"></div>
+        <div class="blackKey aSharp" onmouseover="playAudio('ASharp')"></div>
+        <div class="whiteKey" onmouseover="playAudio('B')"></div>
+        <div class="whiteKey" onmouseover="playAudio('C')"></div>
+    </div>
+</body>
+</html>
