@@ -15,25 +15,57 @@
         var audio = new Audio(note);
         audio.play()
       }
+
+      function showNotes() {
+        // let notes = document.getElementById("notes");
+        let notes = document.getElementsByClassName("notes");
+        for (var i = 0, len = notes.length; i < len; i++) {
+          notes[i].style.visibility = (notes[i].style.visibility === "hidden") ? "visible" : "hidden";
+        }
+      }
+
+      function moveMenu() {
+        var x = document.getElementById("menu-panel");
+        x.style.transform = (x.style.transform === "translateX(-120%)") ? "translateX(-3%)" : "translateX(-120%)";
+}
   </script>
 </head>
 
 <body>
     <h1> The Music Trainer</h1>
-    <div class="keyboard">
-        <div class="whiteKey" onmouseover="playAudio('C')"></div>
-        <div class="blackKey cSharp" onmouseover="playAudio('CSharp')"></div>
-        <div class="whiteKey" onmouseover="playAudio('D')"></div>
-        <div class="blackKey dSharp" onmouseover="playAudio('DSharp')"></div>
-        <div class="whiteKey" onmouseover="playAudio('E')"></div>
-        <div class="whiteKey" onmouseover="playAudio('F')"></div>
-        <div class="blackKey fSharp" onmouseover="playAudio('FSharp')"></div>
-        <div class="whiteKey" onmouseover="playAudio('G')"></div>
-        <div class="blackKey gSharp" onmouseover="playAudio('GSharp')"></div>
-        <div class="whiteKey" onmouseover="playAudio('A')"></div>
-        <div class="blackKey aSharp" onmouseover="playAudio('ASharp')"></div>
-        <div class="whiteKey" onmouseover="playAudio('B')"></div>
-        <div class="whiteKey" onmouseover="playAudio('C')"></div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon">
+      <input type="checkbox" checked onclick="moveMenu()">
+      <div></div>
+      </div>
+    <div id="menu-panel" class="menu-panel">
+      <div class="exit">X
+        <br><br>
+      <button type="button" class="exitButton" onclick="moveMenu()"></button>
+        </div>
+      <br><div>How it works:</div><br>
+      <div>Click on a note to hear it's sound!</div><br>
     </div>
+<!-- End Menu -->
+
+    <br>
+    <div class="keyboard">
+        <div class="whiteKey" onmouseover="playAudio('C')"><span class="notes">C</span></div>
+        <div class="blackKey cSharp" onmouseover="playAudio('CSharp')"><span class="black notes">C#</span></div>
+        <div class="whiteKey" onmouseover="playAudio('D')"><span class="notes">D</span></div>
+        <div class="blackKey dSharp" onmouseover="playAudio('DSharp')"><span class="black notes">D#</span></div>
+        <div class="whiteKey" onmouseover="playAudio('E')"><span class="notes">E</span></div>
+        <div class="whiteKey" onmouseover="playAudio('F')"><span class="notes">F</span></div>
+        <div class="blackKey fSharp" onmouseover="playAudio('FSharp')"><span class="black notes">F#</span></div>
+        <div class="whiteKey" onmouseover="playAudio('G')"><span class="notes">G</span></div>
+        <div class="blackKey gSharp" onmouseover="playAudio('GSharp')"><span class="black notes">G#</span></div>
+        <div class="whiteKey" onmouseover="playAudio('A')"><span class="notes">A</span></div>
+        <div class="blackKey aSharp" onmouseover="playAudio('ASharp')"><span class="black notes">A#</span></div>
+        <div class="whiteKey" onmouseover="playAudio('B')"><span class="notes">B</span></div>
+        <div class="whiteKey" onmouseover="playAudio('C')"><span class="notes">C</span></div>
+    </div>
+    <br>
+    <button type="button" class="notesButton" onclick="showNotes()">Show Notes</button>
 </body>
 </html>
