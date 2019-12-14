@@ -18,6 +18,8 @@ Week 08: Not much work this week, we were all busy and couldn\'92t meet up. Were
 
 Week 09: Worked on a few different lesson plans, AJAX, JSON Parse, JS Events, localStorage, met with team and discussed our progress through the course and the plan for our projects for the rest of the semester. Discussed different ideas as to how we could implement certain ideas into our projects.
 
-Week 10:
-Week 11:
-Week 12:
+Week 10-13: Spent a bit of time working on final project. Process involved trying a few different ideas for a website before ultimately settling
+for a simple music training website. The idea is something I've thought about doing this for sometime, so now is a good excues to try out a
+simple version of the idea. It should give the user the ability to play simple tunes on a digital keyboard. SPent a few hours each week updating
+the website until it is where it's at today. Utilized some code from earlier assignments as well as some code from other classes to help out.
+It's been busy with other final projects, so this is what I was able to accomplish with the time I had.
