@@ -17,7 +17,6 @@
       }
 
       function showNotes() {
-        // let notes = document.getElementById("notes");
         let notes = document.getElementsByClassName("notes");
         for (var i = 0, len = notes.length; i < len; i++) {
           notes[i].style.visibility = (notes[i].style.visibility === "hidden") ? "visible" : "hidden";
@@ -27,45 +26,51 @@
       function moveMenu() {
         var x = document.getElementById("menu-panel");
         x.style.transform = (x.style.transform === "translateX(-120%)") ? "translateX(-3%)" : "translateX(-120%)";
-}
+      }
   </script>
 </head>
 
 <body>
-    <h1> The Music Trainer</h1>
+  <div class="container">
+    <div class="leftSide"></div>
+    <div class="center">
+      <h1> The Music Trainer</h1>
 
-    <!-- Menu Icon -->
-    <div class="menu-icon">
-      <input type="checkbox" checked onclick="moveMenu()">
-      <div></div>
-      </div>
-    <div id="menu-panel" class="menu-panel">
-      <div class="exit">X
-        <br><br>
-      <button type="button" class="exitButton" onclick="moveMenu()"></button>
+      <!-- Menu Icon -->
+      <div class="menu-icon">
+        <input type="checkbox" checked onclick="moveMenu()">
+        <div></div>
         </div>
-      <br><div>How it works:</div><br>
-      <div>Click on a note to hear it's sound!</div><br>
-    </div>
-<!-- End Menu -->
+      <div id="menu-panel" class="menu-panel">
+        <div class="exit">X
+          <br><br>
+        <button type="button" class="exitButton" onclick="moveMenu()"></button>
+          </div>
+        <br><div>How it works:</div><br>
+        <div>Click on a note to hear it's sound!</div><br>
+      </div>
+  <!-- End Menu -->
 
-    <br>
-    <div class="keyboard">
-        <div class="whiteKey" onmouseover="playAudio('C')"><span class="notes">C</span></div>
-        <div class="blackKey cSharp" onmouseover="playAudio('CSharp')"><span class="black notes">C#</span></div>
-        <div class="whiteKey" onmouseover="playAudio('D')"><span class="notes">D</span></div>
-        <div class="blackKey dSharp" onmouseover="playAudio('DSharp')"><span class="black notes">D#</span></div>
-        <div class="whiteKey" onmouseover="playAudio('E')"><span class="notes">E</span></div>
-        <div class="whiteKey" onmouseover="playAudio('F')"><span class="notes">F</span></div>
-        <div class="blackKey fSharp" onmouseover="playAudio('FSharp')"><span class="black notes">F#</span></div>
-        <div class="whiteKey" onmouseover="playAudio('G')"><span class="notes">G</span></div>
-        <div class="blackKey gSharp" onmouseover="playAudio('GSharp')"><span class="black notes">G#</span></div>
-        <div class="whiteKey" onmouseover="playAudio('A')"><span class="notes">A</span></div>
-        <div class="blackKey aSharp" onmouseover="playAudio('ASharp')"><span class="black notes">A#</span></div>
-        <div class="whiteKey" onmouseover="playAudio('B')"><span class="notes">B</span></div>
-        <div class="whiteKey" onmouseover="playAudio('C')"><span class="notes">C</span></div>
+      <br>
+      <div class="keyboard">
+          <div class="whiteKey" onclick="playAudio('C')" ontouchstart="playAudio('C')"><span class="notes">C</span></div>
+          <div class="blackKey cSharp" onclick="playAudio('CSharp')" ontouchstart="playAudio('CSharp')"><span class="black notes">C#</span></div>
+          <div class="whiteKey" onclick="playAudio('D')" ontouchstart="playAudio('D')"><span class="notes">D</span></div>
+          <div class="blackKey dSharp" onclick="playAudio('DSharp')" ontouchstart="playAudio('DSharp')"><span class="black notes">D#</span></div>
+          <div class="whiteKey" onclick="playAudio('E')" ontouchstart="playAudio('E')"><span class="notes">E</span></div>
+          <div class="whiteKey" onclick="playAudio('F')" ontouchstart="playAudio('F')"><span class="notes">F</span></div>
+          <div class="blackKey fSharp" onclick="playAudio('FSharp')" ontouchstart="playAudio('FSharp')"><span class="black notes">F#</span></div>
+          <div class="whiteKey" onclick="playAudio('G')" ontouchstart="playAudio('G')"><span class="notes">G</span></div>
+          <div class="blackKey gSharp" onclick="playAudio('GSharp')" ontouchstart="playAudio('GSharp')"><span class="black notes">G#</span></div>
+          <div class="whiteKey" onclick="playAudio('A')" ontouchstart="playAudio('A')"><span class="notes">A</span></div>
+          <div class="blackKey aSharp" onclick="playAudio('ASharp')" ontouchstart="playAudio('ASharp')"><span class="black notes">A#</span></div>
+          <div class="whiteKey" onclick="playAudio('B')" ontouchstart="playAudio('B')"><span class="notes">B</span></div>
+          <div class="whiteKey" onclick="playAudio('C')" ontouchstart="playAudio('C')"><span class="notes">C</span></div>
+      </div>
+      <br>
+      <button type="button" class="notesButton" onclick="showNotes()">Show Notes</button>
     </div>
-    <br>
-    <button type="button" class="notesButton" onclick="showNotes()">Show Notes</button>
+    <div class="rightSide"></div>
+  </div>
 </body>
 </html>
